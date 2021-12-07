@@ -1,43 +1,16 @@
 apiVersion: v1
 entries:
-  boldbi:
+  boldreports:
   - apiVersion: v2
-    appVersion: 4.2.68
+    appVersion: 3.3.31
     created: "2021-10-05T21:05:08.7003196+05:30"
-    description: Embed powerful analytics inside your apps and turn your customers
-      into success stories with built-in intelligence features.
+    description: Make bolder business decisions with complete reporting solutions and unleash the power of your data with paginated, printable reports and make intelligent decisions
     digest: a8ae85dcb3db133df9cd10e577cbfea4689ba5ff911df12c3f2bc672ba0d38c3
-    home: https://www.boldbi.com/
-    icon: https://website-assets.boldbi.com/wp-content/uploads/2019/05/boldbi-header-menu-logo.svg
-    name: boldbi
+    home: https://www.boldreports.com/
+    icon: https://on-premise-demo.boldreports.com/reporting/images/application/boldreports/main_logo.svg
+    name: boldreports
     type: application
     urls:
-    - https://boldbi.github.io/boldbi-kubernetes/boldbi-4.2.68.tgz
-    version: 4.2.68
-  - apiVersion: v2
-    appVersion: 4.1.45
-    created: "2021-10-05T21:05:08.6985617+05:30"
-    description: Embed powerful analytics inside your apps and turn your customers
-      into success stories with built-in intelligence features.
-    digest: eed0b05456656801e4f09fc59520d257c86e16685b7d610792e0d95e92ee084a
-    home: https://www.boldbi.com/
-    icon: https://website-assets.boldbi.com/wp-content/uploads/2019/05/boldbi-header-menu-logo.svg
-    name: boldbi
-    type: application
-    urls:
-    - https://boldbi.github.io/boldbi-kubernetes/boldbi-4.1.45.tgz
-    version: 4.1.45
-  - apiVersion: v2
-    appVersion: 4.1.43
-    created: "2021-10-05T21:05:08.6686189+05:30"
-    description: Embed powerful analytics inside your apps and turn your customers
-      into success stories with built-in intelligence features.
-    digest: 1ce78fcd86648f5a7a6a3246d650cde91cb26471378fed72b3cf94c20cc9f75f
-    home: https://www.boldbi.com/
-    icon: https://website-assets.boldbi.com/wp-content/uploads/2019/05/boldbi-header-menu-logo.svg
-    name: boldbi
-    type: application
-    urls:
-    - https://boldbi.github.io/boldbi-kubernetes/boldbi-4.1.43.tgz
-    version: 4.1.43
+    - https://github.com/ranganathan-arumugam/boldreports-helm/blob/gh-pages/boldreports-helm.tar.gz
+    version: 3.3.31
 generated: "2021-10-05T21:05:08.6109888+05:30"
