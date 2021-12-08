@@ -9,6 +9,6 @@ entries:
     name: boldreports
     type: application
     urls:
-    - https://github.com/ranganathan-arumugam/boldreports-helm/blob/gh-pages/boldreports.tgz/boldreports.tgz
+    - https://github.com/ranganathan-arumugam/boldreports-helm/blob/gh-pages/boldreports.tgz
     version: 3.1.42
 generated: "2021-12-08T16:23:37.7885982+05:30"
