@@ -3,11 +3,11 @@ entries:
   boldreports:
   - apiVersion: v2
     appVersion: 3.1.42
-    created: "2021-12-08T18:57:32.63728+05:30"
+    created: "2021-12-08T19:02:15.1474973+05:30"
     description: Make bolder business decisions with complete reporting solutions
       and unleash the power of your data with paginated, printable reports and make
       intelligent decisions.
-    digest: f9fd75f942b5a969e4dc3a7c757d50c66f5321e5a5205ae3817bc2efc9167982
+    digest: 37a305bb01fc2705f3b5986b609b13f54c4d95a8b752d71ec73ecc7e4ddf9b63
     home: https://www.boldreports.com/
     icon: https://on-premise-demo.boldreports.com/reporting/images/application/boldreports/main_logo.svg
     name: boldreports
@@ -17,7 +17,7 @@ entries:
     version: 3.1.42
   - apiVersion: v2
     appVersion: 3.1.42
-    created: "2021-12-08T18:57:32.6383492+05:30"
+    created: "2021-12-08T19:02:15.1485786+05:30"
     description: Make bolder business decisions with complete reporting solutions
       and unleash the power of your data with paginated, printable reports and make
       intelligent decisions.
@@ -31,7 +31,7 @@ entries:
     version: 3.1.42
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-12-08T18:57:32.6401171+05:30"
+    created: "2021-12-08T19:02:15.150409+05:30"
     description: A Helm chart for Kubernetes
     digest: 5af504e99b6ae098d14afe054d6c9052c7c8d5d4540c5934ba0b27d7b67fa6b1
     name: boldreports
@@ -41,7 +41,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-12-08T18:57:32.6412233+05:30"
+    created: "2021-12-08T19:02:15.151513+05:30"
     description: A Helm chart for Kubernetes
     digest: 5af504e99b6ae098d14afe054d6c9052c7c8d5d4540c5934ba0b27d7b67fa6b1
     name: boldreports
@@ -49,4 +49,4 @@ entries:
     urls:
     - https://ranganathan-arumugam.github.io/boldreports-helm/test2/boldreports.tgz
     version: 0.1.0
-generated: "2021-12-08T18:57:32.636137+05:30"
+generated: "2021-12-08T19:02:15.1464054+05:30"
