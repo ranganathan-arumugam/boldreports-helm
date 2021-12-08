@@ -3,12 +3,50 @@ entries:
   boldreports:
   - apiVersion: v2
     appVersion: 3.1.42
-    created: "2021-12-08T16:23:37.8384476+05:30"
-    description: Make bolder business decisions with complete reporting solutions and unleash the power of your data with paginated, printable reports and make intelligent decisions.
-    digest: 5af504e99b6ae098d14afe054d6c9052c7c8d5d4540c5934ba0b27d7b67fa6b1
+    created: "2021-12-08T18:05:56.4139118+05:30"
+    description: Make bolder business decisions with complete reporting solutions
+      and unleash the power of your data with paginated, printable reports and make
+      intelligent decisions.
+    digest: a3fed831f27fa6c4c257c52e09a4040d9e250808d7b63cc9a95c859b83bece71
+    home: https://www.boldreports.com/
+    icon: https://on-premise-demo.boldreports.com/reporting/images/application/boldreports/main_logo.svg
+    name: boldreports
+    type: application
+    urls:
+    - https://ranganathan-arumugam.github.io/boldreports-helm/boldreports-3.1.42.tgz
+    version: 3.1.42
+  - apiVersion: v2
+    appVersion: 3.1.42
+    created: "2021-12-08T18:05:56.4162202+05:30"
+    description: Make bolder business decisions with complete reporting solutions
+      and unleash the power of your data with paginated, printable reports and make
+      intelligent decisions.
+    digest: 92117da247d96d20b4fff1e0e290cb7f6ac91a8e48ce6df22776596d1c2ebea5
+    home: https://www.boldreports.com/
+    icon: https://on-premise-demo.boldreports.com/reporting/images/application/boldreports/main_logo.svg
     name: boldreports
     type: application
     urls:
     - https://ranganathan-arumugam.github.io/boldreports-helm/boldreports.tgz
     version: 3.1.42
-generated: "2021-12-08T16:23:37.7885982+05:30"
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-12-08T18:05:56.4556667+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 5af504e99b6ae098d14afe054d6c9052c7c8d5d4540c5934ba0b27d7b67fa6b1
+    name: boldreports
+    type: application
+    urls:
+    - https://ranganathan-arumugam.github.io/boldreports-helm/New%20folder/boldreports.tgz
+    version: 0.1.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-12-08T18:05:56.4568165+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 5af504e99b6ae098d14afe054d6c9052c7c8d5d4540c5934ba0b27d7b67fa6b1
+    name: boldreports
+    type: application
+    urls:
+    - https://ranganathan-arumugam.github.io/boldreports-helm/test2/boldreports.tgz
+    version: 0.1.0
+generated: "2021-12-08T18:05:56.4123093+05:30"
