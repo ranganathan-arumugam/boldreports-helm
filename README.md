@@ -1,4 +1,4 @@
-<a href="https://www.boldbi.com">
+<a href="https://www.boldreports.com/">
   <img
   src="https://www.boldbi.com/wp-content/uploads/2019/05/boldbi-header-menu-logo.svg"
   alt="boldbi"
@@ -10,17 +10,15 @@
 [![Documentation](https://img.shields.io/badge/docs-help.boldbi.com-blue.svg)](https://help.boldbi.com/embedded-bi)
 [![File Issues](https://img.shields.io/badge/file_issues-boldbi_support-blue.svg)](https://support.boldbi.com)
 
-# What is Bold BI
+# What is Bold Reports
 
-Bold BI is a powerful business intelligence dashboard software that helps you to get meaningful insights from your business data and make better decisions.
+Bold Reports Enterprise Reporting is a business intelligence report management tool, built by Syncfusion for creating, managing, and distributing pixel-perfect paginated RDL reports behind your organization’s firewall.
 
-It is an end-to-end solution for creating, managing, and sharing interactive business dashboards that includes a powerful dashboard designer for composing easily.
+Enterprise reporting help us to analyse, explain and report business information in our day-to-day life.
 
-With deep embedding, you can interact more with your data and get insights right from your application.
+# Bold Reports on Kubernetes
 
-# Bold BI on Kubernetes
+There are two ways to deploy Bold Reports on Kubernetes cluster. Please follow the below documents for Bold Reports deployment.
 
-There are two ways to deploy Bold BI on Kubernetes cluster. Please follow the below documents for Bold BI deployment.
-
-* [Deploy Bold BI using Helm](helm/README.md)
-* [Deploy Bold BI using kubectl](docs/index.md)
+* [Deploy Bold Reports using Helm](helm/README.md)
+* [Deploy Bold Reports using kubectl](docs/index.md)

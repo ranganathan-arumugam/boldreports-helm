@@ -2,7 +2,7 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 namespace: bold-services
-appBaseUrl: 'http://host.docker.internal'
+appBaseUrl: ''
 optionalLibs: ''
 clusterProvider: ''
 
@@ -24,12 +24,12 @@ persistentVolume:
     # base64 string
     azureStorageAccountKey: ''
   onpremise:
-    hostPath: '/run/desktop/mnt/host/d/app6/shared'
+    hostPath: ''
     
 image:
-  repo: boldbi-dev-296107
+  repo: gcr.io/boldreports
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 3.2.66
+  tag: 3.3.23
   pullPolicy: IfNotPresent
 imagePullSecrets: []
 

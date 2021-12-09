@@ -46,13 +46,13 @@ spec:
         image: "{{ $.Values.image.repo }}/bold-idp-api:{{ $.Values.image.tag }}"
         {{- else if eq $service.app "id-ums" }}
         image: "{{ $.Values.image.repo }}/bold-ums:{{ $.Values.image.tag }}"
-        {{- else if eq $service.app "reporting-web" }}
+        {{- else if eq $service.app "reports-web" }}
         image: "{{ $.Values.image.repo }}/boldreports-server:{{ $.Values.image.tag }}"
-        {{- else if eq $service.app "reporting-api" }}
+        {{- else if eq $service.app "reports-api" }}
         image: "{{ $.Values.image.repo }}/boldreports-server-api:{{ $.Values.image.tag }}"
-        {{- else if eq $service.app "reporting-jobs" }}
+        {{- else if eq $service.app "reports-jobs" }}
         image: "{{ $.Values.image.repo }}/boldreports-server-jobs:{{ $.Values.image.tag }}"
-        {{- else if eq $service.app "reporting-dataservice" }}
+        {{- else if eq $service.app "reports-reportservice" }}
         image: "{{ $.Values.image.repo }}/boldreports-designer:{{ $.Values.image.tag }}"
         {{- end }}
         ports:
@@ -82,11 +82,12 @@ spec:
             path: /health-check
             port: 80
           {{- if eq $service.app "id-web" }}
-          initialDelaySeconds: 30
+          initialDelaySeconds: 60
           {{- else }}
-          initialDelaySeconds: 20
+          initialDelaySeconds: 60
           {{- end }}
           periodSeconds: 10
+          timeoutSeconds: 10
         volumeMounts:
         - mountPath: /application/app_data
           name: {{ $service.app }}-volume
@@ -96,14 +97,14 @@ spec:
         - mountPath: /application/idp/api/logs/k8s
         {{- else if eq $service.app "id-ums" }}
         - mountPath: /application/idp/ums/logs/k8s
-        {{- else if eq $service.app "reporting-web" }}
-        - mountPath: /application/reporting/web/logs/k8s
-        {{- else if eq $service.app "reporting-api" }}
-        - mountPath: /application/reporting/api/logs/k8s
-        {{- else if eq $service.app "reporting-jobs" }}
-        - mountPath: /application/reporting/jobs/logs/k8s
-        {{- else if eq $service.app "reporting-reportservice" }}
-        - mountPath: /application/reporting/reportservice/logs/k8s
+        {{- else if eq $service.app "reports-web" }}
+        - mountPath: /application/reporting/web/logs
+        {{- else if eq $service.app "reports-api" }}
+        - mountPath: /application/reporting/api/logs
+        {{- else if eq $service.app "reports-jobs" }}
+        - mountPath: /application/reporting/jobs/logs
+        {{- else if eq $service.app "reports-reportservice" }}
+        - mountPath: /application/reporting/reportservice/logs
         {{- end }}
           name: log4net-config-volume
       volumes:

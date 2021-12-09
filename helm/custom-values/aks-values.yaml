@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 namespace: bold-services
 appBaseUrl: ''
-optionalLibs: 'phantomjs,mongodb,mysql,influxdb,snowflake,oracle,npgsql'
+optionalLibs: 'mysql,oracle,npgsql'
 clusterProvider: 'aks'
 
 persistentVolume:
@@ -60,25 +60,25 @@ instanceConfig:
     maxReplicas: 20
     cpuResourceRequests: 250m
     memoryResourceRequests: 750Mi
-  - app: bi-web
+  - app: reports-web
     replicaCount: 1
     minReplicas: 1
     maxReplicas: 20
     cpuResourceRequests: 250m
     memoryResourceRequests: 750Mi
-  - app: bi-api
+  - app: reports-api
     replicaCount: 1
     minReplicas: 1
     maxReplicas: 20
     cpuResourceRequests: 250m
     memoryResourceRequests: 750Mi
-  - app: bi-jobs
+  - app: reports-jobs
     replicaCount: 1
     minReplicas: 1
     maxReplicas: 20
     cpuResourceRequests: 250m
     memoryResourceRequests: 750Mi
-  - app: bi-dataservice
+  - app: reports-reportservice
     replicaCount: 1
     minReplicas: 1
     maxReplicas: 20
@@ -96,6 +96,3 @@ autoscaling:
     percentValue: 10
     percentPeriodSeconds: 60
     
-bingMapWidget:
-  enabled: false
-  apiKey: ''
