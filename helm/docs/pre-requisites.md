@@ -33,8 +33,6 @@ Ex:  `D://app/shared` -> `/run/desktop/mnt/host/d/app/shared`
 
 ## Create and connect a cluster
 
-* [Google Kubernetes Engine (GKE)](#gke-cluster)
-* [Amazon Elastic Kubernetes Service (EKS)](#eks-cluster)
 * [Azure Kubernetes Service (AKS)](#aks-cluster)
 * [On-premise](#on-premise-cluster)
 
