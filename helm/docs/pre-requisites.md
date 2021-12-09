@@ -2,30 +2,9 @@
 
 ## File Storage
 
-* [Google Kubernetes Engine (GKE)](#gke-file-storage)
-* [Amazon Elastic Kubernetes Service (EKS)](#eks-file-storage)
 * [Azure Kubernetes Service (AKS)](#aks-file-storage)
 * [On-premise](#on-premise-file-storage)
 
-### GKE File Storage
-
-1. Create a Google filestore instance to store the shared folders for application usage.
-
-   https://console.cloud.google.com/filestore 
-
-2. Note the **File share name** and **IP address** after creating filestore instance.
-
-![File Share details](images/gke_file_share_details.png)
-
-### EKS File Storage
-
-1. Deploy the EFS CSI Driver to your cluster and create an Amazon Elastic File System (EFS) volume to store the shared folders for application usage by following the below link.
-
-   https://docs.aws.amazon.com/eks/latest/userguide/efs-csi.html 
-
-2. Note the **File system ID** after creating EFS file system.
-
-![AWS EFS](images/aws-efs.png)
 
 ### AKS File Storage
 
@@ -59,24 +38,6 @@ Ex:  `D://app/shared` -> `/run/desktop/mnt/host/d/app/shared`
 * [Azure Kubernetes Service (AKS)](#aks-cluster)
 * [On-premise](#on-premise-cluster)
 
-### GKE Cluster
-
-1. Create a Kubernetes cluster in Google Cloud Platform (GCP) to deploy Bold BI.
-
-   https://console.cloud.google.com/kubernetes 
-
-2. Connect with your GKE cluster.
-
-   https://cloud.google.com/kubernetes-engine/docs/quickstart
-
-### EKS Cluster
-
-1. Create an Amazon EKS cluster and [node group](https://docs.aws.amazon.com/eks/latest/userguide/eks-compute.html) to deploy Bold BI.
-
-   https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html 
-
-2. Connect to your Amazon EKS cluster.
-   https://aws.amazon.com/premiumsupport/knowledge-center/eks-cluster-connection/
 
 ### AKS Cluster
 
@@ -113,22 +74,6 @@ If you need to configure Bold BI with Ingress, [Install Nginx ingress controller
     </tr>
     <tr>
       <td>
-       GKE Cluster
-      </td>
-      <td>
-       kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.41.2/deploy/static/provider/cloud/deploy.yaml
-      </td>
-    </tr>
-    <tr>
-      <td>
-       EKS Cluster
-      </td>
-      <td>
-       kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.41.2/deploy/static/provider/aws/deploy.yaml
-      </td>
-    </tr>
-    <tr>
-      <td>
        AKS Cluster
       </td>
       <td>
@@ -158,22 +103,6 @@ If you need to configure Bold BI with Istio, [Install Istio ingress gateway](htt
       </td>
       <td>
        <b>Description</b>
-      </td>
-    </tr>
-    <tr>
-      <td>
-       GKE Cluster
-      </td>
-      <td>
-      https://cloud.google.com/istio/docs/istio-on-gke/installing
-      </td>
-    </tr>
-    <tr>
-      <td>
-       EKS Cluster
-      </td>
-      <td>
-       https://aws.amazon.com/blogs/opensource/getting-started-istio-eks/
       </td>
     </tr>
     <tr>

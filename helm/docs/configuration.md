@@ -2,10 +2,10 @@
 
 ## Client Libraries
 
-The following are the client libraries used in Bold BI.
+The following are the client libraries used in Bold Reports.
 
 ```console
-optionalLibs: 'phantomjs,mongodb,mysql,influxdb,snowflake,oracle,npgsql'
+optionalLibs: 'mysql,oracle,npgsql'
 ```
 
 Read the optional client library license agreement from the following link.
@@ -18,16 +18,16 @@ If you wish to inlcude only specific client libraries note the optional client l
 
 ### Name
 
-Persistent volumes were global resources. So if you already have Bold BI installed in your cluster, then the previous persistent volume name will conflict with current installation. Change this name to avoid conflicts with previous Bold BI persistent volumes.
+Persistent volumes were global resources. So if you already have Bold Reports installed in your cluster, then the previous persistent volume name will conflict with current installation. Change this name to avoid conflicts with previous Bold Reports persistent volumes.
 
-By default the persistent volume name used in Bold BI is `bold-fileserver`. 
+By default the persistent volume name used in Bold Reports is `bold-fileserver`. 
 
 ```console
 persistentVolume:
   # persistent volumes were global resources. 
-  # so if you already have Bold BI installed in your cluster, 
+  # so if you already have Bold Reports installed in your cluster, 
   # then the previous persistent volume name will conflict with current installation.
-  # Change this name to avoid conflicts with previous Bold BI persistent volumes.
+  # Change this name to avoid conflicts with previous Bold Reports persistent volumes.
   name: bold-fileserver
 ```
 
@@ -35,7 +35,7 @@ persistentVolume:
 
 Generally, a PV will have a specific storage capacity. This is set using the PV's capacity attribute. See the [Kubernetes Resource Model](https://git.k8s.io/community/contributors/design-proposals/scheduling/resources.md) to understand the units expected by capacity.
 
-By default the persistent volume capacity used in Bold BI is `3Gi`. 
+By default the persistent volume capacity used in Bold Reports is `3Gi`. 
 
 ```console
 persistentVolume:
@@ -44,94 +44,8 @@ persistentVolume:
 
 ### Persistent volume configuration for each cluster
 
-1. GKE
 
-```console
-clusterProvider: gke
-    
-persistentVolume:
-  gke:
-    fileShareName: <file_share_name>
-    fileShareIp: <file_share_ip_address>
-```
-<br/>
-<table>
-    <tr>
-      <td>
-       <b>Name</b>
-      </td>
-      <td>
-       <b>Description</b>
-      </td>
-    </tr>
-    <tr>
-      <td>
-       clusterProvider
-      </td>
-      <td>
-       The type of kubernetes cluster provider you are using. In this case the clusterProvider value is <i>gke</i>
-      </td>
-    </tr>
-    <tr>
-      <td>
-       persistentVolume.gke.fileShareName
-      </td>
-      <td>
-       The <i>File share name</i> of your filestore instance.
-      </td>
-    </tr>
-    <tr>
-      <td>
-       persistentVolume.gke.fileShareIp
-      </td>
-      <td>
-       The <i>IP address</i> of your filestore instance.
-      </td>
-    </tr>
-</table>
-<br/>
-
-
-2. EKS
-
-```console
-clusterProvider: eks
-    
-persistentVolume:
-  eks:
-    efsFileSystemId: <efs_file_system_id>
-```
-
-<br/>
-<table>
-    <tr>
-      <td>
-       <b>Name</b>
-      </td>
-      <td>
-       <b>Description</b>
-      </td>
-    </tr>
-    <tr>
-      <td>
-       clusterProvider
-      </td>
-      <td>
-       The type of kubernetes cluster provider you are using. In this case the clusterProvider value is <i>eks</i>
-      </td>
-    </tr>
-    <tr>
-      <td>
-       persistentVolume.eks.efsFileSystemId
-      </td>
-      <td>
-       The <i>File system ID</i> of your EFS file system.
-      </td>
-    </tr>
-</table>
-<br/>
-
-3. AKS
+1. AKS
 
 ```console
 clusterProvider: aks
@@ -192,7 +106,7 @@ persistentVolume:
 
 > **NOTE:** The Azure storage account credentials will be maintained in a secret named `bold-azure-secret`
 
-4. On-Premise
+2. On-Premise
   
 ```console
 clusterProvider: onpremise
@@ -239,7 +153,7 @@ persistentVolume:
 
 ### Ingress-Nginx
 
-By default Nginx is used as reverse proxy for Bold BI. To configure load balancing in Bold BI take a look at the below snipet. 
+By default Nginx is used as reverse proxy for Bold Reports. To configure load balancing in Bold Reports take a look at the below snipet. 
 
 ```console
 loadBalancer:
@@ -257,7 +171,7 @@ loadBalancer:
 
 ### Istio Ingress Gateway
 
-If you need to configure Bold BI with Istio then you can change the value as `istio` in your configuration like below.
+If you need to configure Bold Reports with Istio then you can change the value as `istio` in your configuration like below.
 
 ```console
 loadBalancer:
@@ -331,7 +245,7 @@ loadBalancer:
 
 ## Auto Scaling
 
-By default autoscaling is enabled in Bold BI, to disable autoscaling please set `autoscaling.enabled=false`.
+By default autoscaling is enabled in Bold Reports, to disable autoscaling please set `autoscaling.enabled=false`.
 
 ```console
 autoscaling:
@@ -408,15 +322,3 @@ autoscaling:
     </tr>
 </table>
 <br/>
-
-## Bing Map Widget
-
-If you need to use **Bing Map** widget feature, enable this to `true` and API key value for `<widget_bing_map_api_key>`. By default this feature will be set to false.
-
-```console
-bingMapWidget:
-  enabled: <true / false>
-  apiKey: <widget_bing_map_api_key>
-```
-
-> **Note:** The Bing Map keys will be maintained in a secret named `bold-secret`

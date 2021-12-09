@@ -1,14 +1,10 @@
 <a href="https://www.boldreports.com/">
   <img
-  src="https://www.boldbi.com/wp-content/uploads/2019/05/boldbi-header-menu-logo.svg"
-  alt="boldbi"
+  src="https://www.boldreports.com/wp-content/uploads/2019/09/boldreports-ogp.png"
+  alt="boldreports"
   width="400"/>
 </a>
 <br/><br/>
-
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/boldbi/boldbi-kubernetes?sort=semver)](https://github.com/boldbi/boldbi-kubernetes/releases/latest)
-[![Documentation](https://img.shields.io/badge/docs-help.boldbi.com-blue.svg)](https://help.boldbi.com/embedded-bi)
-[![File Issues](https://img.shields.io/badge/file_issues-boldbi_support-blue.svg)](https://support.boldbi.com)
 
 # What is Bold Reports
 
