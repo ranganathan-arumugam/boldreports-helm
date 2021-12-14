@@ -29,7 +29,11 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-body-size: 200m
     nginx.ingress.kubernetes.io/server-snippet: |
       client_max_body_size 200m;
-      set $boldreports_namespace "bold-services";
+      {{- if eq .Release.Namespace "default" }}
+      set $boldreports_namespace "{{ .Values.namespace }}";
+      {{- else }}
+      set $boldreports_namespace "{{ .Release.Namespace }}";
+      {{- end }}     
       
       location ~* "^/reporting/api(/|$)(.*)" {
         set $namespace      $boldreports_namespace;
